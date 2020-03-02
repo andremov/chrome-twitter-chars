@@ -2,10 +2,12 @@
 function checkEdit() {
 
     let tweetEdit = document.querySelector('[aria-label="Tweet text"]');
+    if (!tweetEdit) {
+        return;
+    }
     tweetEdit = getLastChild(tweetEdit);
 
     let charCount = tweetEdit.textContent.length;
-    console.log(charCount);
 
     let charDisplay = document.getElementById('charCount');
 
