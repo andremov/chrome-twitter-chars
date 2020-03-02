@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Twitter Full Character Counter",
+  "version": "1.0.0",
+
+  "description": "Simple extension to always see the characters in a tweet.",
+  "short_name": "Tweet Characters",
+  "permissions": ["activeTab", "declarativeContent", "tabs"],
+
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["override.js"]
+    }
+  ],
+
+  "page_action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  }
+}
